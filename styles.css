@@ -29,3 +29,26 @@ p, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+
+/* Global variables */
+
+:root {
+    --blueColor: rgb(8, 166, 238);
+    --greyColor: rgb(181, 189, 193);
+    --yellowColor: rgb(238, 155, 0);
+}
+
+/* Main styles */
+
+.container {
+    display: grid;
+    grid: 1fr 5fr / 50px 70px 1fr;
+}
+
+/* Sidebar */
+
+.sidebar {
+    background-color: var(--blueColor);
+
+}
+
