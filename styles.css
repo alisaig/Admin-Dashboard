@@ -30,25 +30,71 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/* Global variables */
+/* Global */
 
+/* Global variables */
 :root {
-    --blueColor: rgb(8, 166, 238);
-    --greyColor: rgb(181, 189, 193);
-    --yellowColor: rgb(238, 155, 0);
+  --blueColor: rgb(8, 166, 238);
+  --greyColor: rgb(210, 219, 224);
+  --yellowColor: rgb(238, 155, 0);
 }
+
+html, body {
+  height: 100%;
+}
+
 
 /* Main styles */
 
 .container {
-    display: grid;
-    grid: 1fr 5fr / 50px 70px 1fr;
+  display: grid;
+  grid-template: 50px 70px 1fr / 1fr 5fr;
+  min-height: 100%;
 }
+
 
 /* Sidebar */
 
 .sidebar {
-    background-color: var(--blueColor);
+  background-color: var(--blueColor);
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
 
+
+/* Header */
+
+.header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+/* Toolbar */
+
+.toolbar {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+/* Main Board */
+
+.mainBoard {
+  background-color: var(--greyColor);
+  grid-column: 2;
+  grid-row: 3;
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+}
+
+.projects {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.projectBlocks {
+  display: grid;
+  grid-auto-flow: ;
 }
 
