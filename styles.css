@@ -14,7 +14,7 @@ body {
 }
 
 img, picture, video, canvas, svg {
-  display: block;
+  /* display: block; */
   max-width: 100%;
 }
 
@@ -79,13 +79,21 @@ body {
   font-family: 'Ubuntu', system-ui, sans-serif;
 }
 
-
 /* Main styles */
 
 .container {
   display: grid;
-  grid-template: 70px 100px 1fr / 1fr 3.5fr;
+  grid-template: 70px 120px 1fr / 1fr 3.5fr;
   min-height: 100%;
+}
+
+button > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header, .toolbar {
+  padding: 2.5rem;
 }
 
 
@@ -113,7 +121,7 @@ body {
   width: 72px;
   height: auto;
   fill: white;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .logo > span {
@@ -127,14 +135,54 @@ body {
 .header {
   grid-column: 2;
   grid-row: 1;
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
 }
 
+.header > * {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.searchbar {
+  width: 500px;
+  height: 30px;
+  background-color: var(--greyColor);
+  border-radius: 10px;
+}
+
+.personal-corner > img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
 
 /* Toolbar */
 
 .toolbar {
   grid-column: 2;
   grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar > * {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.greeting > img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.greeting-text {
+  display: inline-block;
 }
 
 
