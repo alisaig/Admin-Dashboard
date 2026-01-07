@@ -14,7 +14,6 @@ body {
 }
 
 img, picture, video, canvas, svg {
-  /* display: block; */
   max-width: 100%;
 }
 
@@ -65,9 +64,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Global variables */
 
 :root {
-  --blueColor: rgb(0, 169, 147);
-  --greyColor: rgb(225, 236, 235);
-  --yellowColor: rgb(255, 0, 98);
+  --primaryColor: rgb(0, 169, 147);
+  --greyColor: rgb(229, 235, 235);
+  --secondaryColor: rgb(255, 0, 98);
 }
 
 
@@ -106,8 +105,8 @@ button > svg {
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
-  background-color: var(--blueColor);
+  gap: 3rem;
+  background-color: var(--primaryColor);
   grid-column: 1;
   grid-row: 1 / 4;
   padding: 1.6rem;
@@ -120,7 +119,7 @@ button > svg {
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .logo {
@@ -130,9 +129,7 @@ button > svg {
 
 .logo > svg {
   width: 72px;
-  height: auto;
   fill: white;
-  /* display: inline-block; */
 }
 
 .section {
@@ -143,7 +140,6 @@ button > svg {
 
 .section > svg {
   width: 28px;
-  height: 28px;
   fill: white;
 }
 
@@ -172,6 +168,10 @@ button > svg {
   gap: 1.5rem;
 }
 
+.header svg {
+  width: 24px;
+}
+
 .searchbar {
   width: 40em;
   height: 30px;
@@ -185,9 +185,8 @@ button > svg {
   border-radius: 50%;
 }
 
-.header button {
-  background-color: transparent;
-  border: none;
+.user {
+  font-weight: 700;
 }
 
 /* Toolbar */
@@ -218,8 +217,16 @@ button > svg {
   display: inline-block;
 }
 
+.greeting-text > p {
+  font-weight: 700;
+}
+
+.greeting-text > :last-child {
+  font-size: 1.4rem;
+}
+
 .action-buttons > button {
-  background-color: var(--blueColor);
+  background-color: var(--primaryColor);
   color: white;
   font-weight: 700;
   font-size: 1.05rem;
@@ -266,11 +273,18 @@ button > svg {
 }
 
 .project {
-  /* Find different way for line on left to appear */
-  border-style: solid;
-  border-width: 0;
-  border-left-width: 0.5rem;
-  border-color: var(--yellowColor);
+  position: relative;
+  overflow: hidden;
+}
+
+.project:before{
+    position:absolute;
+    top:0;
+    left:0;
+    width:2%;
+    height:100%;
+    content:"";
+    background-color: var(--secondaryColor);
 }
 
 .trending-projects {
@@ -287,7 +301,7 @@ button > svg {
 
 .trend > img {
   width: 50px;
-  height: auto;
+  height: 50px;
   border-radius: 50%;
 }
 
