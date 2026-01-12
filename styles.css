@@ -34,28 +34,28 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-bold-webfont.woff2') format('woff2'),
+    src: url('fonts/ubuntu-bold-webfont.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-light-webfont.woff2') format('woff2'),
+    src: url('fonts/ubuntu-light-webfont.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-medium-webfont.woff2') format('woff2'),
+    src: url('fonts/ubuntu-medium-webfont.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+    src: url('fonts/ubuntu-regular-webfont.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --primaryColor: rgb(0, 169, 147);
+  --darkerPrimary: rgb(0, 112, 103);
   --secondaryColor: rgb(255, 0, 98);
   --lightGray: rgb(229, 235, 235);
   --darkGray: rgb(91, 91, 91);
@@ -87,12 +88,6 @@ body {
   min-height: 100%;
 }
 
-/* button > svg {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-} */
-
 .header, .toolbar {
   padding: 2.5rem;
 }
@@ -100,6 +95,11 @@ body {
 .project > p, .announcement > p, .trend-text > :last-child {
   color: var(--darkGray);
 }
+
+h2 {
+  font-size: 1.36rem;
+}
+
 
 /* Sidebar */
 
@@ -110,7 +110,7 @@ body {
   background-color: var(--primaryColor);
   grid-column: 1;
   grid-row: 1 / 4;
-  padding: 1.6rem;
+  padding: 1rem 1.6rem;
   color: white;
   font-weight: 700;
   font-size: 1.4rem;
@@ -139,9 +139,13 @@ body {
   gap: 1.6rem;
 }
 
+.section:hover {
+  color: var(--darkerPrimary);
+}
+
 .section > svg {
   width: 28px;
-  fill: white;
+  fill: currentColor;
 }
 
 .section > .section-title {
@@ -202,6 +206,7 @@ body {
   font-weight: 700;
 }
 
+
 /* Toolbar */
 
 .toolbar {
@@ -246,6 +251,10 @@ body {
   border-radius: 20px;
   padding: 8px 32px;
   border: none;
+}
+
+.action-buttons > button:hover {
+  background-color: var(--darkerPrimary);
 }
 
 
@@ -293,6 +302,13 @@ body {
 .project {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
 }
 
 .project:before{
@@ -303,6 +319,21 @@ body {
     height:100%;
     content:"";
     background-color: var(--secondaryColor);
+}
+
+.project > p {
+  margin-bottom: 0.6rem;
+}
+
+.project-actions {
+  margin-top: auto;
+  align-self: flex-end;
+  display: flex;
+  gap: 1.44rem;
+}
+
+.project-actions > svg {
+  width: 24px;
 }
 
 .announ-block {
