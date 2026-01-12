@@ -1,4 +1,4 @@
-#Admin Dashboard Reflection
+# Admin Dashboard Reflection
 
 This project was a great opportunity to put the knowledge from the lessons on grid into practice. It was especially useful in helping me distinguish when to use grid and when to use flexbox. Furthermore, despite it not being the point of the project, I also managed to learn a bit about using the svg element, which I previously wrongly assumed wasn't much different from the img element.
 
